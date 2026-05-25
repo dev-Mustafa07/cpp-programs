@@ -11,3 +11,9 @@ int main() {
     cout << "This is Program no 01";
     return 0;
 }
+    //EXPECTED OUTPUT
+    //*       *       *       *
+    //*       *       *       *
+    //*       *       *       *
+    //*       *       *       *
+    //*       *       *       *
