@@ -10,7 +10,14 @@ int main()
     {
         for (int j = 0; j < num; j++)
         {
-            cout << "*\t";
+            if ((i + j) % 2 == 0)
+            {
+                cout << "0 ";
+            }
+            else
+            {
+                cout << "1 ";
+            }
         }
         cout << endl;
     }
