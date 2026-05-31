@@ -43,5 +43,9 @@ int main()
             cout << endl;
         }
     }
+    cout << "===============================================\n";
+    cout << "\n\n\tThank you to use our program\n";
+    cout << "\tDeveloper - Muhammad Mustafa\n";
+    // cout << "===============================================";
     return 0;
 }
