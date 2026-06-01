@@ -61,7 +61,13 @@ int main()
     cout << "\nDaily temperatures recorded successfully!\n";
     cout << "==================================================\n";
     cout << "The Highest Temperature of the week was: " << highest << "C";
+    if (highest > 50){
+        cout << "\nTemperature is too high\n1.Drink Cold water\n2.Stay hydrated\n3.Stay in shaded or air-conditioned areas when possible.\n4.Limit outdoor activity during peak heat; Especially between 11AM to 4PM\n";
+    }
     cout << "\nThe Lowest Temperature of the week was: " << lowest << "C";
+    if (lowest < 0){
+        cout << "\nTemperature is too cold\n1.Wear multiple layers of clothing instead of one thick layer.\n2.Use heaters safely and ensure proper ventilation.\n3.Consume balanced meals and warm drinks.\n4.Wash your hands regularly.\n";
+    }
     cout << "\n==================================================";
 
     return 0;
