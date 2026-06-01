@@ -21,8 +21,6 @@ int main()
         {
             // cout << userno << " - You aren't enrolled!\n";
             checker = false;
-            break;
-
         }
         // cout << checker << endl;
     }
