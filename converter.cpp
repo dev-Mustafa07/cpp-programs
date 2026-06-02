@@ -10,22 +10,11 @@ int main()
     cin >> decimalno;
     while (decimalno > 0)
     {
-        rem = decimalno % 2;
-        cout << rem;
-        rem = binary[i];
+        binary[i] = decimalno % 2;
         decimalno = decimalno / 2;
         i++;
     }
-    cout << endl;
-    // cout << "----------\n";
-    //     cout << binary[0];
-    //     cout << binary[1];
-    //     cout << binary[3];
-    //     cout << binary[4];
-    //     cout << binary[5];
-    //     cout << binary[6];
-    // cout << "\n----------\n";
-    for (int j = 0; j < i; j++)
+    for (int j = i-1; j >= 0; j--)
     {
         cout << binary[j];
     }
