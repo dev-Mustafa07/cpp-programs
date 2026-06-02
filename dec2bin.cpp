@@ -3,6 +3,7 @@ using namespace std;
 
 int main()
 {
+    // THIS PROGRAM WAS DEVELOPED WITH THE HELP OF *GEMINI
     int dec;
     int binaryNum[32];
     int i = 0;
