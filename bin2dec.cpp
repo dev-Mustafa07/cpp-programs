@@ -1,28 +1,25 @@
-#include<iostream>
+#include <iostream>
 #include <cmath>
 using namespace std;
 
-int main(){
-    int ans;
-    int num;
-    int dec;
+// void converter(int num){
+    
+// }
+
+int main()
+{
+    int ans = 0;
+    int num, dec, c;
     int i = 0;
+    cout << "====================================================\n";
+    cout << "\tConverter Binary to Decimal number\n";
+    cout << "====================================================\n";
+    cout << "WARNING! PLEASE EXACT NUMBER OF DIGITS OF YOUR BINARY NUMBER OTHERWISE OUTPUT WILL NOT BE ACCURATE\n";
     cout << "How many bits do you have for your binary number: ";
     cin >> num;
     int array[num];
     cout << "Enter you binary number to convert that in Decimal number containing " << num << " bits: ";
     cin >> dec;
-    while(dec > 0){
-        dec = dec % 10;
-        array[i] = dec;
-        dec = dec * pow(array[i], i);
-        dec = dec / 10;
-        i++;
-    }
-
-    for(int j = 0;j < num;j++){
-        ans = array[j] + ans;
-    }
-    cout << ans;
+  
     return 0;
 }
