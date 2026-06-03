@@ -32,7 +32,7 @@ All programs are written in clean, standard C++ and are designed to demonstrate 
 ## 👤 Author & Maintainer
 
 * **Lead Developer:** **Muhammad Mustafa**
-* **Project Finalization Date:** June 01, 2026
+* **Project Started Date:** June 01, 2026
 * **Language Profile:** C++ (ISO Standard)
 
 ---

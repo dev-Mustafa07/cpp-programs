@@ -6,7 +6,6 @@ int main()
 {
     int ans = 0;
     int num, dec, c;
-    int o = dec;
     int i = 0;
     cout << "====================================================\n";
     cout << "\tConverter Binary to Decimal number\n";
@@ -17,6 +16,7 @@ int main()
     int array[num];
     cout << "Enter you binary number to convert that in Decimal number containing " << num << " bits: ";
     cin >> dec;
+    int o = dec;
     while (dec > 0)
     {
         c = dec % 10;
