@@ -1,3 +1,1 @@
-cout << "\n-----\n";
-    cout << ans;
-    cout <
+THIS PROGRAM WILL TELL YOU WHETHER INUPUTED NUMBER IS ODD OR EVEN!
