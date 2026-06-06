@@ -1,2 +1,4 @@
-
-            cout << " - " << singleno << " - ";
+; k < 16; k++)
+        // {
+        //     ans = singleno + ans;
+        //     //
