@@ -16,7 +16,6 @@ int main()
             // cout << "\n start of while loop \n";
             singleno = arrayno % 10;
             singleno = singleno * pow(2, exp);
-            cout << " - " << singleno << " - ";
             dec[j] = singleno;
             arrayno /= 10;
             exp++;
@@ -28,7 +27,7 @@ int main()
             // cout << "\n End of for loop \n";
         }
         cout << ans;
-        cout << "\n";
+        cout << "\t";
     }
     return 0;
 }
