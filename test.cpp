@@ -70,8 +70,7 @@ int main()
     }
     else if (choice == 2 && nums > 2) // Subtraction
     {
-        finans = 0;
-        for (int j = 0; j < nums; j++)// Converting binary no in decimal
+        for (int j = 0; j < nums; j++) // Converting binary no in decimal
         {
             int exp = 0;
 
@@ -86,21 +85,24 @@ int main()
 
                 ans = singleno + ans;
             }
+            cout << "\n*" << ans << "*\n";
             dec[j] = ans; // Storing converted decimal no in decimalarray
         }
-
-        for (int l = 1; l < nums; l++)
+        int l;
+        finans = dec[0];
+        for ( l = 1; l < nums; l++)
         {
             // Performing actual calculation - + * /
             finans = finans - dec[l];
-        }
-        if (finans < 0)
+            cout << "\n{" << finans << "}\n";
+        } 
+        cout << "\n[" << l << "]\n";
+        if (finans < 0) // Making number +ve
         {
             // Converting in +ve if answer is coming in -ve
             finans *= -1;
-            cout << "-";
         }
-        cout << "\n-" << finans << "-\n"; 
+        cout << "\n(" << finans << ")\n"; // Printing the sum of decimal no that are converted
         int finbins[32] = {}; // Store actual final binary bits
         int p = 0;
         while (finans > 0) // Converting Binary no into Decimal no
@@ -109,6 +111,7 @@ int main()
             finans /= 2;
             p++;
         }
+        cout << "-";
         for (int g = p - 1; g >= 0; g--)
         {
             cout << finbins[g];
@@ -116,8 +119,6 @@ int main()
     }
     else if (choice == 3 && nums > 2) // Division
     {
-        finans = dec[0];
-
         for (int j = 0; j < nums; j++)
         {
             int exp = 0;
@@ -136,6 +137,7 @@ int main()
             dec[j] = ans;
         }
 
+        finans = dec[0];
         for (int l = 1; l < nums; l++)
         {
             finans /= dec[l];
