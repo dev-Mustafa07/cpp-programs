@@ -34,31 +34,27 @@ void divider(int decimalnums[], int &finans, int size)
     finans = ans;
 }
 
-void decimaltobinary(int finans, int a[])
+void decimaltobinary(int finans, int a[32])
 {
     int num = finans;
-    int ans;
     int i = 0;
-    cout << num << endl;
     while (num > 0)
     {
         a[i] = num % 2;
         num = num / 2;
         i++;
     }
-    cout << num;
-    int size = sizeof(a) / sizeof(a[0]);
-    for (int i = 2; i > 0; i--){
-        cout << "[" << a[i] << "]";
+    // for (int i = size; i > 0; i--){
+    //     cout << "[" << a[i] << "]";
 
-    }
+    // }
 }
 
 int main()
 {
     int binarynums[] = {101000, 1010, 10};
     int size = sizeof(binarynums) / sizeof(binarynums[0]);
-    int decimalnums[3] = {};
+    int decimalnums[size] = {};
     int finans = 0;
     int ans[] = {};
 
@@ -66,12 +62,13 @@ int main()
 
     divider(decimalnums, finans, size);
 
-    cout << "{" << finans << "}\n";
+    // cout << "{" << finans << "}\n";
 
     decimaltobinary(finans, ans);
 
-    // for (int i = 8; i > 0; i--){
-    //     cout << ans[i] << endl;
-    // }
+
+    for (int i = size -; i >= 0; i--){
+        cout << ans[i] << endl;
+    }
     return 0;
 }

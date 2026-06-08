@@ -12,7 +12,7 @@ int main()
     while (dec > 0)
     {
         binaryNum[i] = dec % 2;
-        dec /= 2;
+        dec = dec / 2;
         i++;
     }
     for (int j = i - 1; j >= 0; j--)
