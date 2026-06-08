@@ -68,7 +68,7 @@ int main()
             cout << finbins[g];
         }
     }
-    else if (choice == 2 && nums > 2) // Subtraction
+    else if (choice == 2) // Subtraction
     {
         for (int j = 0; j < nums; j++) // Converting binary no in decimal
         {
@@ -101,8 +101,8 @@ int main()
         {
             // Converting in +ve if answer is coming in -ve
             finans *= -1;
+            cout << "-";
         }
-        cout << "\n(" << finans << ")\n"; // Printing the sum of decimal no that are converted
         int finbins[32] = {}; // Store actual final binary bits
         int p = 0;
         while (finans > 0) // Converting Binary no into Decimal no
@@ -111,13 +111,12 @@ int main()
             finans /= 2;
             p++;
         }
-        cout << "-";
         for (int g = p - 1; g >= 0; g--)
         {
             cout << finbins[g];
         }
     }
-    else if (choice == 3 && nums > 2) // Division
+    else if (choice == 3) // Division
     {
         for (int j = 0; j < nums; j++)
         {
@@ -127,6 +126,7 @@ int main()
             arrayno = bin[j];
             while (arrayno > 0)
             {
+                // Converting binary no into decimal no
                 singleno = arrayno % 10;
                 singleno = singleno * pow(2, exp);
                 arrayno /= 10;
@@ -134,13 +134,17 @@ int main()
 
                 ans = singleno + ans;
             }
-            dec[j] = ans;
+            dec[j] = ans; // Storing Decimal no into dec[] array
+            cout << "\n(" << dec[j] << ")";
+
         }
 
-        finans = dec[0];
+        double  finans = dec[0]; 
         for (int l = 1; l < nums; l++)
         {
-            finans /= dec[l];
+            // Performing division /  
+            finans = finans / dec[l];
+            cout << "\n{" << finans << "}";
         }
 
         if (finans < 0)
@@ -152,7 +156,8 @@ int main()
         int p = 0;
         while (finans > 0)
         {
-            finbins[p] = finans % 2;
+            // Convert final decimal no into binary number.
+            finbins[p] = fmod(finans , 2);
             finans /= 2;
             p++;
         }
@@ -180,8 +185,8 @@ int main()
             }
             dec[j] = ans;
         }
-
-        for (int l = 0; l < nums; l++)
+        finans = dec[0];
+        for (int l = 1; l < nums; l++)
         {
             finans *= dec[l];
         }
