@@ -1,207 +1,32 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 int main()
 {
-    int nums;
-    int finans = 1;
-    int f = 0;
-    int choice;
-    cout << "Please enter how many binary numbers do you have? ";
-    cin >> nums;
-    int bin[nums] = {}; // Store all binary numbers
-    int dec[nums] = {}; // Store all decimal numbers that user input
+    int num = 6;
+    int nums[] = {50, 2, 300, 4, 1, -60};
+    int smallest = 0;
+    int largest = 0;
+    int small = 0;
+    int large = 0;
 
-    do
+    for (int i = 0; i < num; i++)
     {
-        cout << "Enter you binary number: ";
-        cin >> bin[f];
-        f++;
-    } while (f < nums);
-
-    {
-        cout << "Which Operation You want to apply on these binary number?\n";
-        cout << "1. for Addtion(+)\n";
-        cout << "2. for Sutraction(-)\n";
-        cout << "3. for Division(/)\n";
-        cout << "4. for Multipication(x)\n";
-        cout << "Enter your choice: ";
-    }
-    cin >> choice;
-
-    if (choice == 1) // Addition
-    {
-        finans = 0;
-        for (int j = 0; j < nums; j++)
+        if (smallest > nums[i])
         {
-            int exp = 0;
-
-            int arrayno, singleno = 0, ans = 0;
-            arrayno = bin[j];
-            while (arrayno > 0)
-            {
-                singleno = arrayno % 10;
-                singleno = singleno * pow(2, exp);
-                arrayno /= 10;
-                exp++;
-
-                ans = singleno + ans;
-            }
-            dec[j] = ans;
+            smallest = nums[i];
+            small = i;
         }
 
-        for (int l = 0; l < nums; l++)
+        if (largest < nums[i])
         {
-            finans += dec[l];
-        }
-        int finbins[32] = {};
-        int p = 0;
-        while (finans > 0)
-        {
-            finbins[p] = finans % 2;
-            finans /= 2;
-            p++;
-        }
-        for (int g = p - 1; g >= 0; g--)
-        {
-            cout << finbins[g];
+            largest = nums[i];
+            large = i;
         }
     }
-    else if (choice == 2) // Subtraction
-    {
-        for (int j = 0; j < nums; j++) // Converting binary no in decimal
-        {
-            int exp = 0;
-
-            int arrayno, singleno = 0, ans = 0;
-            arrayno = bin[j];
-            while (arrayno > 0)
-            {
-                singleno = arrayno % 10;
-                singleno = singleno * pow(2, exp);
-                arrayno /= 10;
-                exp++;
-
-                ans = singleno + ans;
-            }
-            cout << "\n*" << ans << "*\n";
-            dec[j] = ans; // Storing converted decimal no in decimalarray
-        }
-        int l;
-        finans = dec[0];
-        for ( l = 1; l < nums; l++)
-        {
-            // Performing actual calculation - + * /
-            finans = finans - dec[l];
-            cout << "\n{" << finans << "}\n";
-        } 
-        cout << "\n[" << l << "]\n";
-        if (finans < 0) // Making number +ve
-        {
-            // Converting in +ve if answer is coming in -ve
-            finans *= -1;
-            cout << "-";
-        }
-        int finbins[32] = {}; // Store actual final binary bits
-        int p = 0;
-        while (finans > 0) // Converting Binary no into Decimal no
-        {
-            finbins[p] = finans % 2;
-            finans /= 2;
-            p++;
-        }
-        for (int g = p - 1; g >= 0; g--)
-        {
-            cout << finbins[g];
-        }
-    }
-    else if (choice == 3) // Division
-    {
-        for (int j = 0; j < nums; j++)
-        {
-            int exp = 0;
-
-            int arrayno, singleno = 0, ans = 0;
-            arrayno = bin[j];
-            while (arrayno > 0)
-            {
-                // Converting binary no into decimal no
-                singleno = arrayno % 10;
-                singleno = singleno * pow(2, exp);
-                arrayno /= 10;
-                exp++;
-
-                ans = singleno + ans;
-            }
-            dec[j] = ans; // Storing Decimal no into dec[] array
-            cout << "\n(" << dec[j] << ")";
-
-        }
-
-        double  finans = dec[0]; 
-        for (int l = 1; l < nums; l++)
-        {
-            // Performing division /  
-            finans = finans / dec[l];
-            cout << "\n{" << finans << "}";
-        }
-
-        if (finans < 0)
-        {
-            finans *= -1;
-            cout << "-";
-        }
-        int finbins[32] = {};
-        int p = 0;
-        while (finans > 0)
-        {
-            // Convert final decimal no into binary number.
-            finbins[p] = fmod(finans , 2);
-            finans /= 2;
-            p++;
-        }
-        for (int g = p - 1; g >= 0; g--)
-        {
-            cout << finbins[g];
-        }
-    }
-    else if (choice == 4) // Multipication
-    {
-        for (int j = 0; j < nums; j++)
-        {
-            int exp = 0;
-
-            int arrayno, singleno = 0, ans = 0;
-            arrayno = bin[j];
-            while (arrayno > 0)
-            {
-                singleno = arrayno % 10;
-                singleno = singleno * pow(2, exp);
-                arrayno /= 10;
-                exp++;
-
-                ans = singleno + ans;
-            }
-            dec[j] = ans;
-        }
-        finans = dec[0];
-        for (int l = 1; l < nums; l++)
-        {
-            finans *= dec[l];
-        }
-        int finbins[32] = {};
-        int p = 0;
-        while (finans > 0)
-        {
-            finbins[p] = finans % 2;
-            finans /= 2;
-            p++;
-        }
-        for (int g = p - 1; g >= 0; g--)
-        {
-            cout << finbins[g];
-        }
-    }
+    cout << "Smallest No is: " << smallest << endl;
+    cout << "Largest No is: " << largest << endl;
+    cout << "Smallest No " << smallest << " found at: " << small << endl;
+    cout << "Largest No " << largest << " found at: " << large << endl;
     return 0;
 }
