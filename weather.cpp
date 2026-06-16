@@ -5,14 +5,14 @@ using namespace std;
 int main()
 {
     float temperature[7] = {};
-    string days[7] = {"Monday", "Tuesday", "Wednesday", "Thursaday", "Friday", "Saturday", "Sunday"};
+    string days[7] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
     for (int i = 0; i < 7; i++)
     {
             cout << "Enter the temperature in Celsius of " << days[i] << ": ";
             cin >> temperature[i];
     }
-    int highest = temperature[0];
-    int lowest = temperature[0];
+    float highest = temperature[0];
+    float lowest = temperature[0];
     for (int j = 0; j < 7; j++)
     {
         if (temperature[j] > highest)

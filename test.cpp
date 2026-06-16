@@ -1,32 +1,16 @@
 #include <iostream>
-using namespace std;
+#include <vector>
+#include <cmath>
 
 int main()
 {
-    int num = 6;
-    int nums[] = {50, 2, 300, 4, 1, -60};
-    int smallest = 0;
-    int largest = 0;
-    int small = 0;
-    int large = 0;
-
-    for (int i = 0; i < num; i++)
+    std::vector<int> nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    for (int i = 0; i < nums.size() ; i++)
     {
-        if (smallest > nums[i])
-        {
-            smallest = nums[i];
-            small = i;
-        }
-
-        if (largest < nums[i])
-        {
-            largest = nums[i];
-            large = i;
-        }
+        int num;
+        num = pow(nums[i], 2);
+        std::cout << nums[i] << "  =  ";
+        std::cout << num << "\n";
     }
-    cout << "Smallest No is: " << smallest << endl;
-    cout << "Largest No is: " << largest << endl;
-    cout << "Smallest No " << smallest << " found at: " << small << endl;
-    cout << "Largest No " << largest << " found at: " << large << endl;
     return 0;
 }

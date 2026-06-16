@@ -11,6 +11,9 @@ int main()
         bool isprime = true;
         cout << "Please! Enter no to check whether it is prime or not: ";
         cin >> no;
+        if(no < 2){
+            isprime = false;
+        }
         for (int i = 2; i < no; i++)
         {
             if (no % i == 0)
@@ -31,7 +34,7 @@ int main()
         cin >> choice;
     } while (choice == 'y' || choice == 'Y');
     cout << "===============================================\n";
-    cout << "\n\n\tThank you to use our program\n";
+    cout << "\n\tThank you to use our program\n";
     cout << "\tDeveloper - Muhammad Mustafa\n";
     cout << "===============================================";
 }

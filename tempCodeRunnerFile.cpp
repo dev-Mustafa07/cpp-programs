@@ -1,1 +1,1 @@
-ong long 
+perature[j] > hi
